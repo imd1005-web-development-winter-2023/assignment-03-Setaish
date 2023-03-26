@@ -1,45 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Set the page title -->
-    <title>Assignment 03</title>
+<head>
+	<!-- Metadata for the document -->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Title of the document -->
+	<title>Todo List 2023 </title>
+	<!-- Link to the my CSS file:))) -->
+	<link rel="stylesheet" href="main.css" />
+    
+</head>
+<body>
+	<!-- Main container for the application -->
+	<main class="app">
+		<!-- Greeting section -->
+		<section class="greeting">
+			<!-- Title of the section -->
+			<h2 class="title">
+				<!-- Greeting message with input field -->
+				Welcome Back!, <input type="text" id="name" placeholder="Name here" />
+			</h2>
+		</section>
+        	<!-- Create Todo section -->
+	<section class="create-todo">
+		<!-- Title of the section -->
+		<h3>CREATE A TODO</h3>
+		<!-- Form for creating new todo -->
+		<form id="new-todo-form">
+			<!-- Label and input for todo content -->
+			<h4>What's on your todo?</h4>
+			<input 
+				type="text" 
+				placeholder="e.g. Get some milk"
+				name="content"
+				id="content" />
+			
+			<!-- Label and radio buttons for todo category -->
+			<h4>Pick a category</h4>
+			<div class="options">
+				<label>
+					<input type="radio" name="category" id="category1" value="business" /> 
+					<!-- Bubble with category color -->
+					<span class="bubble business"></span>
+					<!-- Category label -->
+					<div>Sc</div>
+				</label>
+				<label>
+					<input type="radio" name="category" id="category2" value="personal" />
+					<!-- Bubble with category color -->
+					<span class="bubble personal"></span>
+					<!-- Category label -->
+					<div>Personal</div>
+				</label>
+			</div>
 
-    <!-- Set the charset we're using to UTF-8 -->
-    <meta charset="UTF-8" />
+			<!-- Submit button for adding new todo -->
+			<input type="submit" value="Add todo" />
+		</form>
+	</section>
+	<!-- End of Create Todo section -->
 
-    <!-- Set the screens default zoom / scale to 1 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- Todo List section -->
+	<section class="todo-list">
+		<!-- Title of the section -->
+		<h3>TODO LIST</h3>
+		<!-- Container for todo items -->
+		<div class="list" id="todo-list"></div>
+	</section>
+	<!-- End of Todo List section -->
 
-    <!-- We are using a CSS Reset file to standardize browser default css -->
-    <link rel="stylesheet" href="reset.css" />
+</main>
+<!-- End of main container -->
 
-    <!-- This is where all of our awesome CSS code goes -->
-    <link rel="stylesheet" href="style.css" />
-
-    <!-- Set the Favicon  -->
-    <link rel="icon" href="./images/favicon/rocket.svg" type="image/svg+xml" />
-  </head>
-  <body>
-    <!--
-
-      ADD YOUR ASSIGNMENT 03 CODE
-
-      YOU MAY REMOVE THE BOILERPLATE CODE BELOW
-
-      IMPORTANT CHECKLIST:
-
-      - Are users able to create and delete to do list items?
-      - Have you set a favicon? (included - but it's a rocket)
-      - Do you have a css reset file? (included)
-      - Has a team member conducted a code review and left a GitHub Issue in your repo?
-      - Have you conducted a code review and left a GitHub Issue on your team member's repo?
-
-    -->
-    <main>
-      <div id="app"></div>
-    </main>
-
-    <!-- This is where we add our awesome JavaScript code -->
-    <script src="./main.js"></script>
-  </body>
+<!-- Import of the JavaScript file -->
+<script src="main.js"></script>
+<!-- End of JS Import -->
+</body>
 </html>
